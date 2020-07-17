@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuMascota</title>
+    <link rel="stylesheet" href="./hojaEstilos.css" >  
+    <script src="./Mascotas.js"></script>
+    <script src="./Gato.js"></script>
+    <script src="./Perro.js"></script>
+    <script src="./Pajaro.js"></script>
+    <script src="./funcionesHTML.js"></script>
+</head>
+<body>
+    <div id="container" >
+        <div id="contenedorModificar" class="container"> 
+            <label>Mascota </label>
+            <select name="tipoMascota" id="mascota" >
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Pajaro">Pajaro</option>
+            </select>
+            <label>Nombre </label>
+            <input type ="text" size="35" id="name"> <br>
+            
+            <div id="contenedorPerro" > 
+                <label>Raza</label>
+                <input type ="text" size="35" id="razaPerro"> <br>
+            </div>
+            <div id="contenedorGato" hidden> 
+                <label>Vidas</label>
+                <input type ="number" size="35" id="vidasGato"> <br>
+            </div>
+            <div id="contenedorPajaro" hidden> 
+                <label>TipoPajaro</label>
+                <select name="tipoPajaro" id="tipoPajaro">
+                    <option value=0>Rapiña</option>
+                    <option value=1>Loro</option>
+                </select>
+            </div>    
+            <input type ="button" value="Guardar" id="btnGuardar">
+            
+        </div>
+        <input type ="text"  id="search_input" placeholder="Filter table by name" >
+    </div>
+    <h2></h2>
+    <Table>
+        <thead>
+            <th>Nombre</th>
+            <th>.</th>
+        </thead>
+        <tbody id="tCuerpo"></tbody>
+    </Table>
+
+</body>
+</html>
